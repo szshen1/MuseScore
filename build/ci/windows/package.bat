@@ -163,7 +163,9 @@ cd "%BUILD_DIR%"
 cmake -DPACKAGE_FILE_ASSOCIATION=%PACKAGE_FILE_ASSOCIATION% ..
 
 SET PATH=%WIX_DIR%;%PATH% 
-cmake --build . --target package || GOTO END_ERROR
+cmake --build . --target package
+
+type "D:\a\MuseScore\MuseScore\build.release\_CPack_Packages\win64\WIX\wix.log"
 cd ..
 
 ECHO "Create logs dir"
